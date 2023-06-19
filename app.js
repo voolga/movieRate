@@ -19,7 +19,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const lastMovie = prompt("Один из просмотренных фильмов", "");
+        const lastMovie = prompt("Один из просмотренных фильмов", "").trim();
         const lastMovieRate = prompt("На сколько его оцените", "");
 
         if (lastMovie != null && lastMovieRate != null && lastMovie != '' && lastMovieRate != '' && lastMovie.length < 50) {
@@ -32,7 +32,7 @@ function rememberMyFilms() {
     }
 };
 
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
@@ -62,6 +62,10 @@ function showMyDB(hidden) {
 
 // showMyDB(personalMovieDB.privat);
 
+// 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос
+// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+// genres
+
 
 function writeYourGenres(genreDB) {
     for (let i = 0; i < 3; i++) {
@@ -76,9 +80,7 @@ function writeYourGenres(genreDB) {
 
 writeYourGenres(personalMovieDB.genres);
 
-// 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос
-// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-// genres
+
 
 /* Задание на урок:
 
